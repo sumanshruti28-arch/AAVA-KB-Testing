@@ -1,0 +1,51 @@
+Functional validation flow for KB creation, approval, discovery, editing, and Agent integration
+
+1. Create KB & Trigger Pipeline Ingestion
+
+Navigate: From the left sidebar, click Build ➔ Knowledge Base (or click Create on the top bar ➔ Knowledge Base).
+Select Level: Choose your Hierarchy Level from the top dropdown (e.g., Organization / Team).
+Fill Details: Enter KB Name & Description.
+Upload Files: In the Source section, upload your test document(s).
+Configure Pipeline: Click through the stepper steps (Cleanse ➔ Chunking ➔ Embedding ➔ Destination) using defaults.
+Build Pipeline: On the Review step, click Create / Build Pipeline and wait for the progress bar to finish.
+Send for Approval: Click the Send for Approval button in the top right header.
+
+2. Approve Knowledge Base
+
+Navigate: From the left sidebar / header, click Approvals (or switch to Console ➔ Approvals).
+Locate Request: Under the Knowledge Base tab, find your newly submitted KB.
+Approve: Click the Approve button on the item card or review popup.
+
+3. Verify in Discovery
+
+Navigate: From the left sidebar, click Discovery (or Marketplace).
+Filter & Search: Select the Knowledge Bases tab and search for your KB name.
+Preview: Click on the KB card to open it and verify the files and status are displayed in read-only view.
+
+4. Edit KB & Re-submit for Approval
+
+Navigate: In Discovery (or via Account / My Creations), locate your KB card.
+Click Edit: Click the three dots (⋮) menu on the card and select Edit.
+Modify: Add a new file or change the description/pipeline settings.
+Save & Submit: Click Save Changes (to re-run ingestion) and then click Send for Approval.
+
+5. Re-Approve & Verify Update
+
+Navigate: Go back to Approvals from the main menu.
+Approve Revision: Locate the updated KB and click Approve.
+Verify: Go back to Discovery ➔ Knowledge Bases ➔ open your KB card to confirm the newly added file is present.
+
+6. Create Agent & Attach the KB
+
+Navigate: From the left sidebar, click Build ➔ Agent (or click Create ➔ Agent).
+Match Level: Ensure the Hierarchy Level at the top matches the exact same level used for the KB.
+Fill Details: Enter Agent Name and Instructions / Prompt.
+Attach KB: In the Knowledge Base section/widget on the builder canvas, click Add Knowledge Base (+ button).
+Select & Apply: Find your approved KB in the popup modal, select the checkbox, and click Apply / Add.
+Save & Test: Click Save Agent, then click Playground / Test to test queries against the attached KB.
+
+Overall Expected Flow
+
+Create KB → Run Pipeline → Send for Approval → Approve → Verify in Discovery → Edit → Re-run Ingestion → Re-submit → Re-approve → Verify Update → Attach KB to Agent → Test in Playground.
+
+I can also turn this into a test-case spreadsheet with columns for step, action, expected result and pass/fail.
